@@ -1,1 +1,251 @@
 
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head><script>(function(){function mkStore(){var m={};return{getItem:function(k){return Object.prototype.hasOwnProperty.call(m,k)?m[k]:null;},setItem:function(k,v){m[k]=String(v);},removeItem:function(k){delete m[k];},clear:function(){m={};},key:function(i){return Object.keys(m)[i]||null;},get length(){return Object.keys(m).length;}};}try{window.localStorage.getItem('__t');}catch(e){try{Object.defineProperty(window,'localStorage',{value:mkStore(),configurable:true});}catch(e2){}}try{window.sessionStorage.getItem('__t');}catch(e){try{Object.defineProperty(window,'sessionStorage',{value:mkStore(),configurable:true});}catch(e2){}}})();</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajude o Rafinha</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #f9f3f0;
+            color: #2d2d2d;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+        .imagem-destaque img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+        }
+        .texto-principal {
+            font-weight: 700;
+            font-size: clamp(1.1rem, 2vw, 1.2rem);
+            line-height: 1.8;
+            margin: 1.8rem 0 2.4rem;
+            color: #1a1a1a;
+            text-align: justify; /* Justifica o texto para ficar mais organizado */
+        }
+        .doacao {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 2rem;
+            margin-top: 1.5rem;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+            text-align: center; /* Centraliza os filhos diretos */
+        }
+        .doacao h3 {
+            font-weight: 700;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        .valores {
+            margin: 1rem auto .5rem; /* Centraliza o bloco de valores */
+            display: flex;
+            flex-wrap: wrap;
+            gap: .5rem;
+            justify-content: center; /* Centraliza os botões de valor */
+            max-width: 500px; /* Limita largura para não espalhar demais */
+        }
+        .valor {
+            flex: 1 1 80px;
+            text-align: center;
+            padding: .6rem;
+            font-weight: 700;
+            font-size: 1rem;
+            background: #f8f9fa;
+            border: 2px solid #dee2e6;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all .2s;
+        }
+        .valor:hover, .valor.active {
+            background: #0d6efd;
+            color: #fff;
+            border-color: #0d6efd;
+        }
+        .valor input {
+            width: 100%;
+            padding: .6rem;
+            font-size: 1rem;
+            border: 2px solid #dee2e6;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: 700;
+        }
+        .aviso-minimo {
+            display: none;
+            color: #d60707;
+            margin-top: .5rem;
+            font-size: .9rem;
+            font-weight: 700;
+        }
+        .total {
+            text-align: center;
+            margin-top: 1rem;
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: #0d6efd;
+        }
+        .btn-container {
+            margin-top: 1.5rem;
+            display: flex;
+            justify-content: center;
+        }
+        .botao-gratis {
+            background: linear-gradient(90deg,#0d6efd,#0b5ed7);
+            color: #fff;
+            padding: .8rem 2.5rem;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            cursor: pointer;
+            border: none;
+            transition: .2s;
+            box-shadow: 0 4px 12px rgba(13, 110, 253, 0.3);
+        }
+        .botao-gratis:hover {
+            background: #0b5ed7;
+            transform: translateY(-2px);
+        }
+    </style>
+<style>html,body{overscroll-behavior:contain}canvas{max-width:100%;height:auto}img{max-width:100%}</style></head>
+<body>
+    <div class="container">
+        <div class="imagem-destaque">
+            <!-- Lembre-se de trocar o src pela imagem real -->
+            <img src="file_000000000bac820eba93811ed7e7baeb.png" alt="Foto do Rafinha">
+        </div>
+        <div class="texto-principal">
+            No dia 05/01, nossas esperanças de uma cirurgia e de uma recuperação quase plena para o Rafinha foram profundamente abaladas. A nova ressonância mostrou que os dois lados do cérebro não se desenvolveram, o que infelizmente torna a cirurgia impossível. Esse foi um baque enorme para nós como família. Mas não foi o fim da luta. Agora, o caminho é outro: tratamento contínuo, terapias intensivas e acompanhamento com os melhores profissionais possíveis, para que o Rafinha tenha o máximo de desenvolvimento, conforto e qualidade de vida dentro da realidade dele.
+            <br><br>
+            Além das terapias, o Rafinha precisa de equipamentos adequados. Um carrinho especial, essencial para o conforto, postura e dignidade dele, custa cerca de R$ 20.000.
+            <br><br>
+            Por isso, pedimos a sua ajuda. Cada contribuição, cada compartilhamento, nos aproxima de oferecer ao Rafinha cuidado, conforto e dignidade. O Rafinha precisa de todos nós. E nós agradecemos de coração por qualquer apoio.
+            <br><br>
+            💙Pessoal, ontem (04/12) descobrimos que o caso do Rafinha se agravou.Ele vai precisar remover o quanto antes metade do cérebro — a parte direita — para ter reais chances de viver.Essa cirurgia precisa acontecer no máximo nos próximos 3 meses.
+            <br><br>
+            Pelo SUS, ele aguardará no mínimo mais de um ano na fila, e no particular os melhores especialistas não atendem pelo convênio.
+            <br><br>
+            Por isso, pedimos ajuda: nos ajudem a realizar a cirurgia em janeiro.Seja doando o valor mínimo ou simplesmente compartilhando, qualquer gesto aproxima o Rafinha da chance de continuar lutando.
+            <br><br>
+            💙 Hoje o Rafinha tem 11 meses.Apesar de toda a força e vontade de viver, ele enfrenta grandes desafios no desenvolvimento:
+            <br><br>
+            Ainda não consegue sentar sozinho
+            <br>
+            Não rola de um lado para o outro
+            <br>
+            Não levanta o pescoço quando está deitado
+            <br>
+            E não consegue segurar os brinquedos
+            <br><br>
+            Cada pequena conquista é uma vitória imensa — e cada dia é uma luta por mais autonomia, mais descobertas e mais esperança.
+            <br><br>
+            🙏 Precisamos do seu apoio para seguir garantindo os tratamentos, terapias e estímulos que podem mudar o futuro do Rafinha.Com a sua ajuda, ele pode dar passos que hoje ainda parecem distantes — mas estão ao alcance com amor, cuidado e solidariedade.
+            <br><br>
+            🧡 A história do Rafinha — e por que ele precisa de você
+            <br><br>
+            O Rafinha é o nosso bebê. Tão pequeno… e já tão guerreiro.
+            <br>
+            Com apenas 2 meses e 28 dias, ele teve sua primeira convulsão. Daí em diante, nossa vida virou de cabeça para baixo: uma maratona de exames, internações e consultas até chegarmos a dois diagnósticos raríssimos:
+            <br>
+            🧠 Hemimegalencefalia parcial direita
+            <br>
+            🧠 Displasia cerebelar direita e atrofia cerebelar esquerda
+            <br><br>
+            Essas condições afetam diretamente o desenvolvimento, o equilíbrio, a coordenação e causam crises frequentes. É como se o cérebro do Rafinha o travasse por dentro.
+            <br>
+            Hoje ele tem apenas 5 meses — e já passou por 4 internações, uma delas para tratar a Síndrome de West, que agrava ainda mais o quadro. Nesta última, já são mais de 17 dias dentro do hospital, sem previsão de alta.
+            <br><br>
+            ⚕️ O que o Rafinha precisa
+            <br><br>
+            O tratamento do Rafinha é para a vida toda. Vai muito além de medicamentos e internações: envolve terapias diárias, estímulos precoces, equipamentos, especialistas e acompanhamento constante. Cada etapa é fundamental para que ele tenha chance de se desenvolver, brincar, aprender e ter qualidade de vida.
+            <br><br>
+            Mesmo com os pais empregados, os custos ultrapassam em muito qualquer possibilidade de sustento apenas familiar. É um cuidado especializado, longo e caro — mas que pode transformar a vida dele.
+            <br><br>
+            A meta foi calculada para garantir anos de tratamento contínuo, acesso às melhores terapias e também para estar preparado caso seja necessário realizar, além de todo esse cuidado, ao menos duas cirurgias particulares de remoção de parte do lado direito do cérebro — procedimentos de altíssima complexidade que podem mudar o futuro do Rafinha.
+        </div>
+
+        <div class="doacao">
+            <h3>🙏 QUERO DOAR</h3>
+            <div class="valores">
+                <div class="valor" data-valor="10">R$ 10</div>
+                <div class="valor" data-valor="15">R$ 15</div>
+                <div class="valor" data-valor="20">R$ 20</div>
+                <div class="valor"valor" data-valor="25">R$ 25</div>
+                <div class="valor" data-valor="50">R$ 50</div>
+                <div class="valor" data-valor="100">R$ 100</div>
+                <div class="valor"><input type="number" placeholder="Outro valor" min="10"></div>
+            </div>
+            <div class="aviso-minimo">Atenção: Valor mínimo de R$ 10,00</div>
+            <div class="total">Total selecionado: R$ <span id="total">0,00</span></div>
+            
+            <div class="btn-container">
+                <button class="botao-gratis" onclick="alert('Redirecionando para pagamento...')">Confirmar Doação</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const valores = document.querySelectorAll('.valor');
+            const inputCustom = document.querySelector('.valor input');
+            const avisoMinimo = document.querySelector('.aviso-minimo');
+            const totalSpan = document.getElementById('total');
+            let total = 0;
+
+            valores.forEach(v => v.addEventListener('click', (e) => {
+                // Ignora clique se for no input dentro da div
+                if(e.target.tagName === 'INPUT') return;
+
+                valores.forEach(v2 => v2.classList.remove('active'));
+                v.classList.add('active');
+                
+                // Limpa o input customizado se clicar num botão fixo
+                if(inputCustom) inputCustom.value = '';
+
+                const val = v.dataset.valor ? Number(v.dataset.valor) : 0;
+                total = val;
+                atualizarTotal();
+                avisoMinimo.style.display = 'none';
+            }));
+
+            if(inputCustom){
+                inputCustom.addEventListener('input', () => {
+                    valores.forEach(v => v.classList.remove('active'));
+                    const val = Number(inputCustom.value);
+                    
+                    if(val >= 10){
+                        total = val;
+                        avisoMinimo.style.display = 'none';
+                    } else if (inputCustom.value !== '') {
+                        total = 0;
+                        avisoMinimo.style.display = 'block';
+                    } else {
+                        total = 0;
+                        avisoMinimo.style.display = 'none';
+                    }
+                    atualizarTotal();
+                });
+            }
+
+            function atualizarTotal() {
+                totalSpan.textContent = total.toFixed(2).replace('.', ',');
+            }
+        });
+    </script>
+<script>(function(){function pick(){var c=[];var r=document.getElementById('root');if(r&&r.firstElementChild)c.push(r.firstElementChild);if(r)c.push(r);var b=document.body;if(b&&b.firstElementChild)c.push(b.firstElementChild);if(b)c.push(b);for(var i=0;i<c.length;i++){try{var g=getComputedStyle(c[i]).backgroundColor;if(g&&g!=='rgba(0, 0, 0, 0)'&&g!=='transparent')return g;}catch(e){}}return null;}function sync(){var g=pick();if(g){document.documentElement.style.background=g;document.body.style.background=g;try{parent.postMessage({__bg:{picked:g}},'*');}catch(e){}}}window.addEventListener('load',sync);document.addEventListener('DOMContentLoaded',sync);var n=0,t=setInterval(function(){sync();if(++n>12)clearInterval(t);},200);})();</script></body>
+</html>
