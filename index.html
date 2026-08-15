@@ -172,6 +172,55 @@ body {
     transform: scale(0.98);
 }
 
+.pix-resultado {
+    display: none;
+    margin-top: 20px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 12px;
+}
+
+.qr-code {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.qr-code img {
+    max-width: 250px;
+    width: 100%;
+    height: auto;
+}
+
+.pix-copia {
+    width: 100%;
+    min-height: 100px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    resize: none;
+    font-size: 14px;
+    background: #fff;
+}
+
+.btn-copiar {
+    width: 100%;
+    margin-top: 10px;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #198754;
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.status-pix {
+    margin-top: 15px;
+    font-weight: 700;
+}
+
 @media (max-width: 380px) {
 
     body {
@@ -186,39 +235,240 @@ body {
 
 </style>
 
-</head><script>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="imagem-destaque">
+        <img src="file_000000000bac820eba93811ed7e7baeb.png"
+             alt="Foto do Rafinha">
+    </div>
+
+    <div class="texto-principal">
+
+        <p>
+            <strong>No dia 05/01</strong>, nossas esperanças de uma cirurgia e de uma recuperação quase plena para o Rafinha foram profundamente abaladas.
+            A nova ressonância mostrou que os dois lados do cérebro não se desenvolveram, o que infelizmente torna a cirurgia impossível.
+        </p>
+
+        <p>
+            Esse foi um baque enorme para nós como família. Mas não foi o fim da luta.
+            Agora, o caminho é outro: tratamento contínuo, terapias intensivas e acompanhamento com os melhores profissionais possíveis.
+        </p>
+
+        <p>
+            Além das terapias, o Rafinha precisa de equipamentos adequados.
+            Um carrinho especial, essencial para o conforto, postura e dignidade dele,
+            custa cerca de <strong>R$ 20.000</strong>.
+        </p>
+
+        <p>
+            Por isso, pedimos a sua ajuda.
+            Cada contribuição nos aproxima de oferecer ao Rafinha cuidado e dignidade.
+        </p>
+
+        <hr style="border:0;border-top:1px solid #ddd;margin:2rem 0;">
+
+        <p>
+            💙 <strong>Pessoal, ontem (04/12) descobrimos que o caso do Rafinha se agravou.</strong>
+            Ele vai precisar remover o quanto antes metade do cérebro — a parte direita —
+            para ter reais chances de viver. Essa cirurgia precisa acontecer no máximo nos próximos 3 meses.
+        </p>
+
+        <p>
+            Pelo SUS, ele aguardará no mínimo mais de um ano na fila.
+            Por isso, pedimos ajuda para realizar a cirurgia particular.
+        </p>
+
+        <p>
+            💙 Hoje o Rafinha tem 11 meses.
+            Apesar de toda a força, ele enfrenta grandes desafios:
+        </p>
+
+        <ul style="list-style:none;padding-left:0;">
+            <li>❌ Ainda não consegue sentar sozinho</li>
+            <li>❌ Não rola de um lado para o outro</li>
+            <li>❌ Não levanta o pescoço quando está deitado</li>
+            <li>❌ Não consegue segurar os brinquedos</li>
+        </ul>
+
+        <p>
+            Cada pequena conquista é uma vitória imensa.
+        </p>
+
+        <p>
+            🧡 <strong>A história do Rafinha</strong><br>
+            Com apenas 2 meses, ele teve sua primeira convulsão.
+            Diagnósticos raríssimos: Hemimegalencefalia parcial direita e Displasia cerebelar.
+        </p>
+
+        <p>
+            Hoje ele já passou por 4 internações.
+            O tratamento é para a vida toda e os custos ultrapassam qualquer possibilidade familiar.
+        </p>
+
+    </div>
+
+    <div class="doacao">
+
+        <h3>🙏 QUERO DOAR</h3>
+
+        <div class="valores">
+
+            <div class="valor" data-valor="10">
+                R$ 10
+            </div>
+
+            <div class="valor" data-valor="20">
+                R$ 20
+            </div>
+
+            <div class="valor" data-valor="50">
+                R$ 50
+            </div>
+
+            <div class="valor" data-valor="100">
+                R$ 100
+            </div>
+
+            <div class="valor" data-valor="200">
+                R$ 200
+            </div>
+
+            <div class="valor input-custom">
+
+                <input
+                    type="number"
+                    id="inputValor"
+                    placeholder="Digite o valor"
+                    min="10"
+                    step="0.01">
+
+            </div>
+
+        </div>
+
+        <div class="aviso-erro" id="avisoErro">
+            ⚠️ Atenção: Valor mínimo é R$ 10,00
+        </div>
+
+        <div class="total">
+            Total: <span id="total">R$ 0,00</span>
+        </div>
+
+        <div class="btn-container">
+
+            <button
+                class="botao-gratis"
+                id="btnDoacao">
+
+                FAZER DOAÇÃO AGORA
+
+            </button>
+
+        </div>
+
+        <div class="pix-resultado" id="pixResultado">
+
+            <h3>💙 PIX DA DOAÇÃO</h3>
+
+            <div
+                class="qr-code"
+                id="qrCodeContainer">
+            </div>
+
+            <p style="font-weight:700;margin-bottom:8px;">
+                PIX copia e cola:
+            </p>
+
+            <textarea
+                id="pixCopiaCola"
+                class="pix-copia"
+                readonly>
+            </textarea>
+
+            <button
+                id="btnCopiarPix"
+                class="btn-copiar">
+
+                📋 COPIAR PIX
+
+            </button>
+
+            <p
+                id="statusPix"
+                class="status-pix">
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script>
+
 document.addEventListener('DOMContentLoaded', () => {
 
-    const botoesValor = document.querySelectorAll('.valor[data-valor]');
-    const inputCustom = document.getElementById('inputValor');
-    const containerInput = inputCustom.parentElement;
+    const botoesValor =
+        document.querySelectorAll('.valor[data-valor]');
 
-    const avisoErro = document.getElementById('avisoErro');
-    const totalSpan = document.getElementById('total');
+    const inputCustom =
+        document.getElementById('inputValor');
 
-    const btnDoacao = document.getElementById('btnDoacao');
-    const pixResultado = document.getElementById('pixResultado');
+    const containerInput =
+        inputCustom.parentElement;
 
-    const pixCopiaCola = document.getElementById('pixCopiaCola');
-    const qrCodeContainer = document.getElementById('qrCodeContainer');
+    const avisoErro =
+        document.getElementById('avisoErro');
 
-    const btnCopiarPix = document.getElementById('btnCopiarPix');
-    const statusPix = document.getElementById('statusPix');
+    const totalSpan =
+        document.getElementById('total');
+
+    const btnDoacao =
+        document.getElementById('btnDoacao');
+
+    const pixResultado =
+        document.getElementById('pixResultado');
+
+    const pixCopiaCola =
+        document.getElementById('pixCopiaCola');
+
+    const qrCodeContainer =
+        document.getElementById('qrCodeContainer');
+
+    const btnCopiarPix =
+        document.getElementById('btnCopiarPix');
+
+    const statusPix =
+        document.getElementById('statusPix');
 
     let total = 0;
 
+
     function atualizarDisplay() {
+
         totalSpan.textContent =
             `R$ ${total.toFixed(2).replace('.', ',')}`;
+
     }
 
+
     function limparSelecao() {
+
         botoesValor.forEach(botao => {
+
             botao.classList.remove('active');
+
         });
 
         containerInput.classList.remove('active');
+
     }
+
 
     botoesValor.forEach(botao => {
 
@@ -232,12 +482,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
             avisoErro.style.display = 'none';
 
-            total = Number(botao.dataset.valor);
+            total =
+                Number(botao.dataset.valor);
 
             atualizarDisplay();
+
         });
 
     });
+
 
     inputCustom.addEventListener('focus', () => {
 
@@ -247,9 +500,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     });
 
+
     inputCustom.addEventListener('input', () => {
 
-        const valor = parseFloat(inputCustom.value);
+        const valor =
+            parseFloat(inputCustom.value);
 
         if (isNaN(valor)) {
 
@@ -257,17 +512,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
             avisoErro.style.display = 'none';
 
-        } else if (valor < 10) {
+        }
+
+        else if (valor < 10) {
 
             total = 0;
 
             avisoErro.style.display = 'block';
 
-        } else {
+        }
+
+        else {
 
             total = valor;
 
             avisoErro.style.display = 'none';
+
         }
 
         atualizarDisplay();
@@ -275,200 +535,220 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 
-    btnDoacao.addEventListener('click', async () => {
+    btnDoacao.addEventListener(
+        'click',
+        async () => {
 
-        if (!total || total < 10) {
+            if (!total || total < 10) {
 
-            avisoErro.textContent =
-                '⚠️ Escolha um valor de pelo menos R$ 10,00';
+                avisoErro.textContent =
+                    '⚠️ Escolha um valor de pelo menos R$ 10,00';
 
-            avisoErro.style.display = 'block';
+                avisoErro.style.display =
+                    'block';
 
-            return;
-        }
-
-        btnDoacao.disabled = true;
-
-        btnDoacao.textContent = 'GERANDO PIX...';
-
-        statusPix.textContent = '';
-
-        pixResultado.style.display = 'none';
-
-        pixCopiaCola.value = '';
-
-        qrCodeContainer.innerHTML = '';
-
-
-        try {
-
-            const resposta = await fetch(
-                '/api/criar-pagamento',
-                {
-                    method: 'POST',
-
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-
-                    body: JSON.stringify({
-                        amount: total,
-                        description: 'Doação para o Rafinha'
-                    })
-                }
-            );
-
-
-            const dados = await resposta.json();
-
-
-            if (!resposta.ok) {
-
-                throw new Error(
-                    dados.error ||
-                    'Não foi possível criar o pagamento.'
-                );
-            }
-
-
-            const pixCode =
-                dados.pixCode ||
-                dados.pix_code ||
-                dados.copyPaste ||
-                dados.copy_paste ||
-                dados.qrCodeText ||
-                dados.qr_code_text ||
-                dados.brCode ||
-                dados.br_code ||
-                dados.payload;
-
-
-            const qrCode =
-                dados.qrCode ||
-                dados.qr_code ||
-                dados.qrCodeImage ||
-                dados.qr_code_image ||
-                dados.qrCodeUrl ||
-                dados.qr_code_url;
-
-
-            if (pixCode) {
-
-                pixCopiaCola.value = pixCode;
+                return;
 
             }
 
 
-            if (qrCode) {
-
-                const imagem = document.createElement('img');
-
-                imagem.src = qrCode;
-
-                imagem.alt = 'QR Code PIX';
-
-                imagem.style.maxWidth = '250px';
-
-                imagem.style.width = '100%';
-
-                qrCodeContainer.appendChild(imagem);
-
-            }
-
-
-            pixResultado.style.display = 'block';
-
-
-            if (pixCode) {
-
-                statusPix.textContent =
-                    '✅ PIX criado! Copie o código ou escaneie o QR Code.';
-
-            } else {
-
-                statusPix.textContent =
-                    '✅ Cobrança criada, mas o código PIX não foi encontrado na resposta.';
-
-                console.log('Resposta NovaPay:', dados);
-            }
-
-
-        } catch (erro) {
-
-            console.error(erro);
-
-            pixResultado.style.display = 'block';
-
-            statusPix.textContent =
-                '❌ ' + erro.message;
-
-        } finally {
-
-            btnDoacao.disabled = false;
+            btnDoacao.disabled = true;
 
             btnDoacao.textContent =
-                'FAZER DOAÇÃO AGORA';
+                'GERANDO PIX...';
+
+            statusPix.textContent = '';
+
+            pixResultado.style.display =
+                'none';
+
+            pixCopiaCola.value = '';
+
+            qrCodeContainer.innerHTML = '';
+
+
+            try {
+
+                const resposta =
+                    await fetch(
+                        '/api/criar-pagamento',
+                        {
+                            method: 'POST',
+
+                            headers: {
+                                'Content-Type':
+                                    'application/json'
+                            },
+
+                            body: JSON.stringify({
+                                amount: total,
+                                description:
+                                    'Doação para o Rafinha'
+                            })
+                        }
+                    );
+
+
+                const dados =
+                    await resposta.json();
+
+
+                if (!resposta.ok) {
+
+                    throw new Error(
+                        dados.error ||
+                        'Não foi possível criar o pagamento.'
+                    );
+
+                }
+
+
+                const pixCode =
+                    dados.pixCode ||
+                    dados.pix_code ||
+                    dados.copyPaste ||
+                    dados.copy_paste ||
+                    dados.qrCodeText ||
+                    dados.qr_code_text ||
+                    dados.brCode ||
+                    dados.br_code ||
+                    dados.payload;
+
+
+                const qrCode =
+                    dados.qrCode ||
+                    dados.qr_code ||
+                    dados.qrCodeImage ||
+                    dados.qr_code_image ||
+                    dados.qrCodeUrl ||
+                    dados.qr_code_url;
+
+
+                if (pixCode) {
+
+                    pixCopiaCola.value =
+                        pixCode;
+
+                }
+
+
+                if (qrCode) {
+
+                    const imagem =
+                        document.createElement('img');
+
+                    imagem.src = qrCode;
+
+                    imagem.alt =
+                        'QR Code PIX';
+
+                    qrCodeContainer.appendChild(
+                        imagem
+                    );
+
+                }
+
+
+                pixResultado.style.display =
+                    'block';
+
+
+                if (pixCode) {
+
+                    statusPix.textContent =
+                        '✅ PIX criado! Copie o código ou escaneie o QR Code.';
+
+                }
+
+                else {
+
+                    statusPix.textContent =
+                        '✅ Cobrança criada, mas o código PIX não foi encontrado na resposta.';
+
+                    console.log(
+                        'Resposta NovaPay:',
+                        dados
+                    );
+
+                }
+
+
+            }
+
+            catch (erro) {
+
+                console.error(erro);
+
+                pixResultado.style.display =
+                    'block';
+
+                statusPix.textContent =
+                    '❌ ' + erro.message;
+
+            }
+
+            finally {
+
+                btnDoacao.disabled = false;
+
+                btnDoacao.textContent =
+                    'FAZER DOAÇÃO AGORA';
+
+            }
+
         }
-
-    });
-
-
-    btnCopiarPix.addEventListener('click', async () => {
-
-        if (!pixCopiaCola.value) {
-
-            statusPix.textContent =
-                '⚠️ O código PIX ainda não está disponível.';
-
-            return;
-        }
+    );
 
 
-        try {
+    btnCopiarPix.addEventListener(
+        'click',
+        async () => {
 
-            await navigator.clipboard.writeText(
-                pixCopiaCola.value
-            );
+            if (!pixCopiaCola.value) {
 
-        } catch {
+                statusPix.textContent =
+                    '⚠️ O código PIX ainda não está disponível.';
 
-            pixCopiaCola.select();
+                return;
 
-            document.execCommand('copy');
-        }
-
-
-        btnCopiarPix.textContent =
-            '✅ PIX COPIADO!';
+            }
 
 
-        setTimeout(() => {
+            try {
+
+                await navigator.clipboard.writeText(
+                    pixCopiaCola.value
+                );
+
+            }
+
+            catch {
+
+                pixCopiaCola.select();
+
+                document.execCommand('copy');
+
+            }
+
 
             btnCopiarPix.textContent =
-                '📋 COPIAR PIX';
+                '✅ PIX COPIADO!';
 
-        }, 2000);
 
-    });
+            setTimeout(() => {
+
+                btnCopiarPix.textContent =
+                    '📋 COPIAR PIX';
+
+            }, 2000);
+
+        }
+    );
 
 });
-</script><!DOCTYPE html>
-<html lang="pt-BR">
 
-<head>
-    <!-- seu código original do HEAD -->
-</head>
-
-<body>
-
-    <!-- seu site original -->
-
-    <!-- área da doação -->
-
-    <!-- Parte 2: JavaScript -->
-    <script>
-        // código da Parte 2
-    </script>
+</script>
 
 </body>
+
 </html>
