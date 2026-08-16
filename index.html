@@ -62,6 +62,10 @@ body {
     margin-bottom: 1.2rem;
 }
 
+.texto-principal ul {
+    margin-bottom: 1.2rem;
+}
+
 .doacao {
     background: #ffffff;
     border-radius: 16px;
@@ -100,6 +104,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    min-height: 60px;
 }
 
 .valor:hover,
@@ -107,7 +112,7 @@ body {
     background: #0d6efd;
     color: #fff;
     border-color: #0d6efd;
-    transform: scale(1.05);
+    transform: scale(1.03);
 }
 
 .valor.input-custom {
@@ -115,9 +120,15 @@ body {
     background: #fff;
 }
 
+.valor.input-custom.active {
+    background: #fff;
+    color: #2d2d2d;
+}
+
 .valor.input-custom input {
     width: 100%;
     height: 100%;
+    min-height: 60px;
     border: none;
     background: transparent;
     text-align: center;
@@ -125,6 +136,7 @@ body {
     font-size: 1.1rem;
     outline: none;
     color: #2d2d2d;
+    border-radius: 10px;
 }
 
 .aviso-erro {
@@ -172,53 +184,74 @@ body {
     transform: scale(0.98);
 }
 
+.botao-gratis:disabled {
+    opacity: 0.7;
+    cursor: wait;
+}
+
 .pix-resultado {
     display: none;
-    margin-top: 20px;
-    padding: 20px;
+    margin-top: 2rem;
+    padding: 1.5rem;
     background: #f8f9fa;
-    border-radius: 12px;
+    border-radius: 16px;
+}
+
+.pix-resultado h3 {
+    margin-bottom: 1.5rem;
 }
 
 .qr-code {
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 15px;
+    margin-bottom: 1.5rem;
+    min-height: 20px;
 }
 
 .qr-code img {
-    max-width: 250px;
-    width: 100%;
-    height: auto;
+    width: 250px;
+    height: 250px;
+    max-width: 100%;
+    border-radius: 8px;
+    background: #fff;
+    padding: 10px;
 }
 
 .pix-copia {
     width: 100%;
-    min-height: 100px;
-    padding: 10px;
+    min-height: 110px;
+    padding: 12px;
     border: 1px solid #ddd;
     border-radius: 8px;
-    resize: none;
-    font-size: 14px;
     background: #fff;
+    font-size: 13px;
+    resize: none;
+    word-break: break-all;
 }
 
 .btn-copiar {
     width: 100%;
     margin-top: 10px;
-    padding: 12px;
+    padding: 13px;
     border: none;
     border-radius: 8px;
     background: #198754;
-    color: #fff;
+    color: white;
+    font-size: 1rem;
     font-weight: 700;
     cursor: pointer;
+}
+
+.btn-copiar:active {
+    transform: scale(0.98);
 }
 
 .status-pix {
     margin-top: 15px;
     font-weight: 700;
+    word-break: break-word;
 }
 
 @media (max-width: 380px) {
@@ -242,39 +275,45 @@ body {
 <div class="container">
 
     <div class="imagem-destaque">
-        <img src="file_000000000bac820eba93811ed7e7baeb.png"
-             alt="Foto do Rafinha">
+        <img
+            src="file_000000000bac820eba93811ed7e7baeb.png"
+            alt="Foto do Rafinha"
+        >
     </div>
 
     <div class="texto-principal">
 
         <p>
-            <strong>No dia 05/01</strong>, nossas esperanças de uma cirurgia e de uma recuperação quase plena para o Rafinha foram profundamente abaladas.
-            A nova ressonância mostrou que os dois lados do cérebro não se desenvolveram, o que infelizmente torna a cirurgia impossível.
+            <strong>No dia 05/01</strong>, nossas esperanças de uma cirurgia
+            e de uma recuperação quase plena para o Rafinha foram profundamente
+            abaladas. A nova ressonância mostrou que os dois lados do cérebro
+            não se desenvolveram, o que infelizmente torna a cirurgia impossível.
         </p>
 
         <p>
-            Esse foi um baque enorme para nós como família. Mas não foi o fim da luta.
-            Agora, o caminho é outro: tratamento contínuo, terapias intensivas e acompanhamento com os melhores profissionais possíveis.
+            Esse foi um baque enorme para nós como família. Mas não foi o fim
+            da luta. Agora, o caminho é outro: tratamento contínuo, terapias
+            intensivas e acompanhamento com os melhores profissionais possíveis.
         </p>
 
         <p>
             Além das terapias, o Rafinha precisa de equipamentos adequados.
-            Um carrinho especial, essencial para o conforto, postura e dignidade dele,
-            custa cerca de <strong>R$ 20.000</strong>.
+            Um carrinho especial, essencial para o conforto, postura e dignidade
+            dele, custa cerca de <strong>R$ 20.000</strong>.
         </p>
 
         <p>
-            Por isso, pedimos a sua ajuda.
-            Cada contribuição nos aproxima de oferecer ao Rafinha cuidado e dignidade.
+            Por isso, pedimos a sua ajuda. Cada contribuição nos aproxima de
+            oferecer ao Rafinha cuidado e dignidade.
         </p>
 
         <hr style="border:0;border-top:1px solid #ddd;margin:2rem 0;">
 
         <p>
-            💙 <strong>Pessoal, ontem (04/12) descobrimos que o caso do Rafinha se agravou.</strong>
-            Ele vai precisar remover o quanto antes metade do cérebro — a parte direita —
-            para ter reais chances de viver. Essa cirurgia precisa acontecer no máximo nos próximos 3 meses.
+            💙 <strong>Pessoal, ontem (04/12) descobrimos que o caso do Rafinha
+            se agravou.</strong> Ele vai precisar remover o quanto antes metade
+            do cérebro — a parte direita — para ter reais chances de viver.
+            Essa cirurgia precisa acontecer no máximo nos próximos 3 meses.
         </p>
 
         <p>
@@ -288,10 +327,15 @@ body {
         </p>
 
         <ul style="list-style:none;padding-left:0;">
+
             <li>❌ Ainda não consegue sentar sozinho</li>
+
             <li>❌ Não rola de um lado para o outro</li>
+
             <li>❌ Não levanta o pescoço quando está deitado</li>
+
             <li>❌ Não consegue segurar os brinquedos</li>
+
         </ul>
 
         <p>
@@ -301,12 +345,14 @@ body {
         <p>
             🧡 <strong>A história do Rafinha</strong><br>
             Com apenas 2 meses, ele teve sua primeira convulsão.
-            Diagnósticos raríssimos: Hemimegalencefalia parcial direita e Displasia cerebelar.
+            Diagnósticos raríssimos: Hemimegalencefalia parcial direita
+            e Displasia cerebelar.
         </p>
 
         <p>
             Hoje ele já passou por 4 internações.
-            O tratamento é para a vida toda e os custos ultrapassam qualquer possibilidade familiar.
+            O tratamento é para a vida toda e os custos ultrapassam qualquer
+            possibilidade familiar.
         </p>
 
     </div>
@@ -344,7 +390,8 @@ body {
                     id="inputValor"
                     placeholder="Digite o valor"
                     min="10"
-                    step="0.01">
+                    step="0.01"
+                >
 
             </div>
 
@@ -355,29 +402,35 @@ body {
         </div>
 
         <div class="total">
-            Total: <span id="total">R$ 0,00</span>
+
+            Total:
+            <span id="total">R$ 0,00</span>
+
         </div>
 
         <div class="btn-container">
 
             <button
                 class="botao-gratis"
-                id="btnDoacao">
-
+                id="btnDoacao"
+                type="button"
+            >
                 FAZER DOAÇÃO AGORA
-
             </button>
 
         </div>
 
-        <div class="pix-resultado" id="pixResultado">
+        <div
+            class="pix-resultado"
+            id="pixResultado"
+        >
 
             <h3>💙 PIX DA DOAÇÃO</h3>
 
             <div
                 class="qr-code"
-                id="qrCodeContainer">
-            </div>
+                id="qrCodeContainer"
+            ></div>
 
             <p style="font-weight:700;margin-bottom:8px;">
                 PIX copia e cola:
@@ -386,27 +439,31 @@ body {
             <textarea
                 id="pixCopiaCola"
                 class="pix-copia"
-                readonly>
-            </textarea>
+                readonly
+            ></textarea>
 
             <button
                 id="btnCopiarPix"
-                class="btn-copiar">
-
+                class="btn-copiar"
+                type="button"
+            >
                 📋 COPIAR PIX
-
             </button>
 
             <p
                 id="statusPix"
-                class="status-pix">
-            </p>
+                class="status-pix"
+            ></p>
 
         </div>
 
     </div>
 
 </div>
+
+
+<!-- Biblioteca usada para transformar o PIX copia e cola em QR Code -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 
 
 <script>
@@ -445,6 +502,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const statusPix =
         document.getElementById('statusPix');
+
 
     let total = 0;
 
@@ -506,6 +564,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const valor =
             parseFloat(inputCustom.value);
 
+
         if (isNaN(valor)) {
 
             total = 0;
@@ -530,11 +589,52 @@ document.addEventListener('DOMContentLoaded', () => {
 
         }
 
+
         atualizarDisplay();
 
     });
 
 
+    /*
+     * GERA O QR CODE A PARTIR DO PIX COPIA E COLA
+     */
+    function gerarQrCode(pixCode) {
+
+        qrCodeContainer.innerHTML = '';
+
+        if (!pixCode) {
+            return;
+        }
+
+        if (typeof QRCode === 'undefined') {
+
+            console.error(
+                'Biblioteca QR Code não carregada.'
+            );
+
+            return;
+        }
+
+
+        new QRCode(qrCodeContainer, {
+
+            text: pixCode,
+
+            width: 250,
+
+            height: 250,
+
+            correctLevel:
+                QRCode.CorrectLevel.M
+
+        });
+
+    }
+
+
+    /*
+     * CRIAR PAGAMENTO
+     */
     btnDoacao.addEventListener(
         'click',
         async () => {
@@ -556,6 +656,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             btnDoacao.textContent =
                 'GERANDO PIX...';
+
 
             statusPix.textContent = '';
 
@@ -581,92 +682,112 @@ document.addEventListener('DOMContentLoaded', () => {
                             },
 
                             body: JSON.stringify({
+
                                 amount: total,
+
                                 description:
                                     'Doação para o Rafinha'
+
                             })
+
                         }
                     );
 
 
-                const dados =
-                    await resposta.json();
+                let dados;
+
+
+                try {
+
+                    dados =
+                        await resposta.json();
+
+                }
+
+                catch {
+
+                    throw new Error(
+                        'O servidor não retornou uma resposta válida.'
+                    );
+
+                }
 
 
                 if (!resposta.ok) {
 
                     throw new Error(
+
                         dados.error ||
                         'Não foi possível criar o pagamento.'
+
                     );
 
                 }
 
 
+                /*
+                 * Procura o PIX copia e cola
+                 * nos campos possíveis retornados pela API.
+                 */
                 const pixCode =
+
                     dados.pixCode ||
+
                     dados.pix_code ||
+
                     dados.copyPaste ||
+
                     dados.copy_paste ||
+
                     dados.qrCodeText ||
+
                     dados.qr_code_text ||
+
                     dados.brCode ||
+
                     dados.br_code ||
+
+                    dados.emv ||
+
                     dados.payload;
 
 
-                const qrCode =
-                    dados.qrCode ||
-                    dados.qr_code ||
-                    dados.qrCodeImage ||
-                    dados.qr_code_image ||
-                    dados.qrCodeUrl ||
-                    dados.qr_code_url;
-
-
-                if (pixCode) {
+                if (
+                    pixCode &&
+                    typeof pixCode === 'string'
+                ) {
 
                     pixCopiaCola.value =
                         pixCode;
 
-                }
+
+                    /*
+                     * AQUI ESTÁ A ALTERAÇÃO:
+                     * o QR Code é gerado diretamente
+                     * usando o PIX copia e cola.
+                     */
+                    gerarQrCode(pixCode);
 
 
-                if (qrCode) {
+                    pixResultado.style.display =
+                        'block';
 
-                    const imagem =
-                        document.createElement('img');
-
-                    imagem.src = qrCode;
-
-                    imagem.alt =
-                        'QR Code PIX';
-
-                    qrCodeContainer.appendChild(
-                        imagem
-                    );
-
-                }
-
-
-                pixResultado.style.display =
-                    'block';
-
-
-                if (pixCode) {
 
                     statusPix.textContent =
-                        '✅ PIX criado! Copie o código ou escaneie o QR Code.';
+                        '✅ PIX criado! Escaneie o QR Code ou copie o código abaixo.';
 
                 }
 
                 else {
 
+                    pixResultado.style.display =
+                        'block';
+
                     statusPix.textContent =
-                        '✅ Cobrança criada, mas o código PIX não foi encontrado na resposta.';
+                        '⚠️ A cobrança foi criada, mas a NovaPay não retornou o código PIX.';
 
                     console.log(
-                        'Resposta NovaPay:',
+                        'Resposta completa da NovaPay:',
                         dados
                     );
 
@@ -677,19 +798,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
             catch (erro) {
 
-                console.error(erro);
+                console.error(
+                    'Erro ao criar PIX:',
+                    erro
+                );
+
 
                 pixResultado.style.display =
                     'block';
+
 
                 statusPix.textContent =
                     '❌ ' + erro.message;
 
             }
 
+
             finally {
 
-                btnDoacao.disabled = false;
+                btnDoacao.disabled =
+                    false;
 
                 btnDoacao.textContent =
                     'FAZER DOAÇÃO AGORA';
@@ -700,6 +828,9 @@ document.addEventListener('DOMContentLoaded', () => {
     );
 
 
+    /*
+     * COPIAR PIX
+     */
     btnCopiarPix.addEventListener(
         'click',
         async () => {
